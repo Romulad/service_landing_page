@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-icons.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Get An Amazing Website</title>
+</head>
+<body class="overflow-hidden">
+    <div class="top-0 start-0 bg-white h-100 w-100 position-fixed" style="z-index: 10;" 
+    id="strat-overlay">
+        <div class="d-flex justify-content-center align-items-center An-3 fs-1 h-100">
+            Get An Amazing Website...
+        </div>
+    </div>
+    <header id="header" class="mb-5">
+        
+       <nav id="nav" class="fs-6">
+            <ul class="" id="link-contain">
+                <button class="my-4" id="head-close-btn">
+                    <span class="bi bi-x-lg"></span>
+                </button>
+
+                <li class=" my-auto head-item ">
+                    <a href="#how-it-work" class="head-link text-dark text-decoration-none">
+                        How it works?
+                    </a>
+                </li>
+
+                <li class=" my-auto head-item">
+                    <a href="#services" class="head-link text-dark text-decoration-none">
+                        Services
+                    </a>
+                </li>
+
+                <li class=" my-auto head-item">
+                    <a href="#why-us" class="head-link text-dark text-decoration-none ">
+                        Why us?
+                    </a>
+                </li>
+
+                <li class=" my-auto head-item">
+                    <a href="#portfolio" class="head-link text-dark text-decoration-none">
+                        Portfolio
+                    </a>
+                </li>
+
+                <li class=" my-auto head-item">
+                    <a href="#process" class="head-link text-dark text-decoration-none">
+                        Process
+                    </a>
+                </li>
+
+                <li class=" my-auto head-contact-item">
+                    <a href="#contact-us" class="border-radius-lg btn head-contact-btn btn-warning">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+
+            <button class="border-0 " id="respo-btn">
+                <div class="hambuger-top"></div>
+                <div class="hambuger-bottom"></div>
+            </button>
+       </nav>
+
+       <section id="start" class="d-flex justify-content-center mt-5 position-relative">
+            <div id="intro" class="text-center">
+
+                <h1 class="fw-bolder text-white hero d-inline-block">  
+                    Services For Your Projects Like You Can't Find 
+                    <span class="d-none text-warning" id="hero-inner">Anywhere Else.</span><span  
+                    class="An-1 text-warning fw-normal" id="cursor">|</span>
+                </h1>
+
+                <p class="fs-17 promise text-white mt-4">
+                    We will help you in your website creation project with 
+                    complete integration of GPT writing tool to support you create 
+                    a quality content.
+                </p>
+                
+                <div class="text-white mt-4 mb-lg">
+
+                    <a href="#how-it-work" 
+                    class="btn fs-18  btn-info head-btn-s text-white py-2 px-2 mb-2
+                    border-radius-lg" >
+                      How it works? 
+                    </a>
+
+                </div>
+
+                <div class="d-flex justify-content-center head-form 
+                bg-white border-radius p-3 shadow pos-width align-items-center">
+                    
+                    <form action="" method="POST" class="text-start w-80" id="contact-form"> 
+                        <h2 class="text-center mb-3">Contact Us</h2>
+                        <div class="mb-3 w-100">
+                            <label for="first_name" class="mb-2">First Name:</label>
+                            <input type="text" id="first_name" name="first_name" 
+                            class="form-control border-radius py-2" required 
+                            placeholder="your first name" autocomplete="off" namV="First name">
+                        </div>
+
+                        <div class="mb-3 w-100">
+                            <label for="last_name" class="mb-2">Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" 
+                            class="form-control border-radius py-2" required 
+                            placeholder="your last name" autocomplete="off" namV="Last name">
+                        </div>
+
+                        <div class="mb-3">
+                                <label for="name" class="mb-2">Valid email adress:</label>
+                                <input type="email" id="email" name="email" 
+                                class="form-control border-radius py-2" required
+                                placeholder="valid email adress" autocomplete="off">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="mb-2">Tell us:</label>
+                            <textarea id="message" name="message" 
+                            class="form-control border-radius" required
+                            placeholder="your message" cols="30" rows="3" namV="message"></textarea>
+                        </div>
+
+                        <button class="btn btn-warning border-radius mt-3" type="submit" id="contact-btn-submit">
+                            <i class="bi bi-telegram me-2"></i>Send
+                        </button>
+
+                    </form>
+
+                    <div class="d-flex align-items-center d-none text-center" id="form-success">
+
+                        <div class="">
+                            <div class="text-center mb-2">
+                                <i class="bi bi-check2-circle text-success fs-1"></i>
+                            </div>
+                            
+                            <p class="fs-3 text-center opacity-8">
+                                Form submitted successfully
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+       </section>
+
+    </header>
+    
+
+    <main id="main" class="" style="padding-top: 250px;">
+        <section class="container-fluid text-center mt-3 fs-17" id="web-count-container">
+            <p class=""> <span class="opacity-8">More than</span> 
+                <span class="text-danger fw-bolder fs-2" id="web-count">0</span> 
+                <span class="opacity-8">websites created.</span></p>
+        </section>
+
+
+        <section id="how-it-work" class="container mt-4 mb-5 position-relative">
+
+            <h1 class="mb-4 text-center fw-bolder">How it works?</h1>
+
+            <div class="row justify-content-around">
+
+                <div class="col-md-4">
+                    <div class="step-1 border-radius text-white p-3 mb-4 shadow Tr-1" id="step-1">
+                        <h3 class="mb-5 fs-lg" >➊</h3>
+
+                        <p class="mb-5">Look at the services. Choose the service
+                            which really correspond to your needs and adapted to
+                            your project.
+                        </p>
+
+                        <a href="#services" class="btn btn-success 
+                        border-radius-lg text-decoration-none ">
+                            Services
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-3 border-radius text-white p-3 shadow mb-4 Tr-1" id="step-2">
+                        <h3 class="mb-5 fs-lg">➋</h3>
+
+                        <p class="mb-5">
+                            Now, are you ready? Fill out the contact form
+                            and tell us more about your project.
+                        </p>
+
+                        <a href="#contact-us" class="btn btn-success 
+                        border-radius-lg text-decoration-none head-contact-btn bg-success">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-2 border-radius text-white p-3 shadow Tr-1" id="step-3">
+                        <h3 class="mb-5 fs-lg">➌</h3>
+
+                        <p class="mb-5">
+                            Do you have a specific web app or website project in mind?
+                            Contact us and let's discuss
+                        </p>
+
+                        <a href="#contact-us" class="btn btn-success 
+                        border-radius-lg text-decoration-none head-contact-btn bg-success">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+
+
+        <section id="services">
+            <div class="container mt-4 mb-5">
+                <h1 class="mb-4 fw-bolder text-center">Our services</h1>
+
+                <div class="row justify-content-center flex-wrap">
+
+                    <div class="col-md-5 mx-2 mb-4">
+                        <div class="border-radius p-3 service-pre">
+
+                            <div class="mb-3">
+                                <img src="{{url_for('static', filename='images/indexiconsitedev.svg')}}" 
+                                alt="Website creation" class="shadow p-2 border-radius">
+                            </div>
+
+                            <b class=" border-bottom border-dark fs-4" style="border-width: 2px !important;">
+                                Get an amazing website/webapp
+                            </b>
+
+                            <p class="mt-4 mb-4 opacity-8">
+                                Blog, E-commerce... We are at your disposal to offer you the best service
+                                creation of website/webapp to achieve your goals:
+                                present your business, your portfolio, create your online store... <br><br>
+                                
+                                Moving forward with you towards the success of your project is our
+                                ultimate goal. This is why we exist. <br><br>
+
+                                You have a project, your plan is ready and now you need a great
+                                website/webapp: this is where we are useful
+                            </p>
+
+                            <a href="#contact-us" class="btn btn-warning 
+                        border-radius-lg text-decoration-none head-contact-btn bg-warning">
+                            Contact Us
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 mx-2 mb-4">
+                        <div class="border-radius p-3 service-pre">
+
+                            <div class="mb-3"> 
+                                <img src="{{url_for('static', filename='images/indexredaction.svg')}}" 
+                                alt="Contant with AI" class="shadow p-2 border-radius">
+                            </div>
+
+                            <b class="border-bottom border-dark fs-4" style="border-width: 2px !important;">
+                                Website with AI writing tool
+                            </b>
+
+                            <p class="mt-4 mb-4 opacity-8">
+                                The content of your website is very important and becomes
+                                even more important when you want to be found in search results. <br><br>
+
+                                Sometimes we get stuck when creating content and we don't know where
+                                begin. In that case, how about a creative assistant?
+                                In addition to your website, we will create a
+                                GPT integration to help you create quality content.<br><br>
+
+                                Do you want to use the power of AI on your web app to
+                                improve your content writing? We'll do it for you!
+                            </p>
+
+                            <a href="#contact-us" class="btn btn-warning 
+                        border-radius-lg text-decoration-none">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="why-us">
+            <div class="container mt-5">
+                <h1 class="fw-bolder text-center mb-4">Why us?</h1>
+
+                <div class="text-center mb-4">
+                    <p class="d-inline-block opacity-8" style="max-width: 700px;">
+                        we offer a quality and affordable service to help you attract more
+                        visitors and keep them on your website. More than a beautiful design
+                        we create websites with a complete strategy, make sure to transform your visitors
+                        as a potential customer. First impressions are very important in business.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                       <div class="p-3 border-radius-md shadow">
+                            <div>
+                                <i class="bi bi-currency-exchange fs-4"></i>
+                            </div>
+
+                            <div>
+                                <b class="fs-5 text-warning">Affordable</b>
+                                <p class="mt-2 opacity-8">
+                                    Our services are affordable to help you
+                                    achieve your goals. 
+                                    Our service prices allow us to be the best choice 
+                                    for the creation of website/web app.
+                                </p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <div class="p-3 border-radius-md shadow">
+                            <div>
+                                <i class="bi bi-stars fs-4"></i>
+                            </div>
+
+                            <div>
+                                <b class="fs-5 text-warning">Quality design</b>
+                                <p class="mt-2 opacity-8">
+                                    We will design your website with the goal of 
+                                    getting your visitors to do what you want. 
+                                    Let us create a professional design for your website.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-3 border-radius-md shadow">
+                            <div>
+                                <i class="bi bi-reception-4 fs-4"></i>
+                            </div>
+
+                            <div>
+                                <b class="fs-5 text-warning">SEO optimized</b>
+                                <p class="mt-2 opacity-8">
+                                    A website ranking in search results generates more traffic and more leads. 
+                                    Your website will be optimized for search engines and for your visitors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="p-3 border-radius-md shadow">
+                            <div>
+                                <i class="bi bi-lightning-charge-fill fs-4"></i>
+                            </div>
+
+                            <div>
+                                <b class="fs-5 text-warning">Speed website</b>
+                                <p class="mt-2 opacity-8">
+                                    More than half of visitors leave a website that takes more 
+                                    than 3 seconds to load. Time is important to visitors, 
+                                    so a great user experience is our priority.
+                                </p>
+                            </div> 
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="p-3 border-radius-md shadow">
+                            <div>
+                                <i class="bi bi-layout-wtf fs-4"></i>
+                            </div>
+
+                            <div>
+                                <b class="fs-5 text-warning">Responsive design</b>
+                                <p class="mt-2 opacity-8">
+                                    More than 50% of web traffic comes from small devices.
+                                    A responsive website across devices helps you reach more people 
+                                    and therefore more customers. If 
+                                    you want to succeed online, you need a responsive website 
+                                    for both your business and search engines.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <div class="p-3 border-radius-md shadow">
+                            <div>
+                                <i class="bi bi-person-check fs-4"></i>
+                            </div>
+
+                            <div>
+                                <b class="fs-5 text-warning">Satisfaction guaranteed</b>
+                                <p class="mt-2 opacity-8">
+                                    We will work with you until you are happy.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="portfolio" class="mt-5">
+            
+            <div class="container">
+                <h1 class="text-center fw-bolder mb-4">Our recent work</h1>
+
+                <div class="text-center mb-4 btn-control-container mx-auto">
+
+                    <div class="d-flex justify-content-between">
+                        <button class="bg-warning rounded-circle px-2 py-1 border-0 d-none btn-control me-auto"
+                            id="portf-btn-back">
+                                <i class="bi bi-chevron-double-left"></i>
+                        </button>
+
+                        <button class="bg-warning rounded-circle px-2 py-1 border-0 btn-control ms-auto"
+                        id="portf-btn-forward">
+                            <i class="bi bi-chevron-double-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="row flex-nowrap mx-auto portf-container border-radius-md border"
+                id="portf-container">
+                    <div class="col-md-3 text-center w-100 my-2">
+                        <div class="portf overflow-hidden border-radius-md d-inline-block shadow-lg">
+                            <img src="{{url_for('static', filename='images/work/devportfolio1.webp')}}" 
+                            alt="Work1" class="img-fluid border-radius-md ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 text-center w-100 my-2">
+                        <div class="portf overflow-hidden d-inline-block shadow-lg border-radius-md">
+                            <img 
+                            src="{{url_for('static', filename='images/work/devportfolio2.webp')}}" 
+                            alt="Work2" class="img-fluid border-radius-md ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 text-center w-100 my-2">
+                        <div class="portf overflow-hidden d-inline-block shadow-lg border-radius-md">
+                            <img 
+                            src="{{url_for('static', filename='images/work/devportfolio3.webp')}}" 
+                            alt="Work3" class="img-fluid border-radius-md ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 text-center w-100 my-2">
+                        <div class="portf overflow-hidden d-inline-block shadow-lg border-radius-md">
+                            <img 
+                            src="{{url_for('static', filename='images/work/devportfolio4.webp')}}" 
+                            alt="Work4" class="img-fluid border-radius-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="how-can-we-help-you" class="mt-70px">
+            <div class="container">
+
+                <h1 class="text-center fw-bolder mb-4">How can we help you?</h1>
+
+                <div class="row flex-wrap-reverse mx-1">
+
+                    <div class="col-md-6 my-auto" id="help-icon-container">
+
+                        <div class="d-flex icon-container justify-content-around flex-wrap">
+                            <div class="mb-3 bg-white border-radius p-2 shadow-lg w-200px me-1 Tr-1" id="help-1">
+                                <div class=" text-center">
+                                    <img src="{{url_for('static', filename='images/help/business-team-icon.svg')}}" 
+                                    alt="Experienced Team" class="img-fluid d-inline-block w-50px">
+                                </div>
+                                <p class="mt-2 text-center mb-0 opacity-8">Experienced team</p>
+                            </div>
+
+                            <div class="mb-3 bg-white border-radius p-2 shadow-lg w-200px me-1 Tr-1" id="help-2">
+                                <div class="text-center">
+                                   <img src="{{url_for('static', filename='images/help/indexiconcompetitif.svg')}}" 
+                                    alt="offer" class="img-fluid d-inline-block w-30px"> 
+                                </div>
+                                
+                                <p class="mt-2 text-center mb-0 opacity-8">Quality and affordable service</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex icon-container justify-content-around flex-wrap">
+                            <div class="mb-3 bg-white border-radius p-2 shadow-lg w-200px me-1 Tr-1" id="help-3">
+                                <div class="text-center">
+                                    <img src="{{url_for('static', filename='images/help/online-training-icon.svg')}}" 
+                                    alt="Training" class="img-fluid d-inline-block w-40px">
+                                </div>
+
+                                <p class="text-center mt-2 mb-0 opacity-8">At your service</p>
+                            </div>
+
+                            <div class="mb-3 bg-white border-radius p-2 shadow-lg w-200px me-1 Tr-1" id="help-4">
+                                <div class="text-center">
+                                    <img src="{{url_for('static', filename='images/help/indexiconquality.svg')}}" 
+                                    alt="Quality" class="img-fluid d-inline-block w-50px">
+                                </div>
+
+                                <p class="text-center mt-2 mb-0 opacity-8">Complete satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 help-text-container shadow text-white border-radius-md p-3 mb-3">
+                        <p>
+                            Do you have a web development project that requires experience 
+                            and expertise? Your first step starts 
+                            <a href="#services" class=" text-warning text-decoration-none">HERE</a>. 
+                            Make your life easier, optimize your time, benefit 
+                            from the best service without breaking the bank, 
+                            whatever the scale of your project.<br><br> 
+
+                            With our experience and technical expertise, 
+                            we will bring you quality in achieving your goals: 
+                            increase your visibility, increase your income, 
+                            strengthen the notoriety of your brand, retain your customers, 
+                            all with the highest return on investment. <br><br> 
+                            
+                            From a simple freelance project to large projects, 
+                            we are at your service to realize your ideas.
+                        </p>
+                    </div>   
+
+            </div>
+            
+        </section>
+
+
+        <section id="process" class="mt-70px">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-5 process-head">
+                        <h1 class="text-center fw-bolder mb-3">Our Process</h1>
+                        <p class="mb-0 text-center mx-1 opacity-8">
+                            When it comes to web design and development, it's
+                            very important to work with a compagny that knows how get things done.
+                            We follow a process that allows us to work with you at your pace and create
+                            an atmosphere that allows you to participate in the process. It's a 
+                            collaboration, not a dictatorship.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column">
+
+                            <div class="d-flex process" id="process-1">
+                                <div class="me-3 fs-5 position-relative ">
+                                    <div class="border-left-center"></div>
+                                    <i class="bi bi-person-badge process-icon rounded-circle"></i>
+                                </div>
+
+                                <div class="mb-5 shadow px-3 pb-3 border-radius-md">
+                                    <b class="fs-5 text-warning">Discover</b>
+                                    <p class="mb-0 opacity-8"> 
+                                        We need to understand your needs and requirements. This 
+                                        process is very simple and consists of filling out a 
+                                        questionnaire form which can help us understand your needs.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex process" id="process-2">
+                                <div class="me-3 fs-5 position-relative">
+                                    <div class="border-left-center"></div>
+                                    <i class="bi bi-palette process-icon rounded-circle"></i>
+                                </div>
+
+                                <div class="mb-5 px-3 pb-3 border-radius-md shadow">
+                                    <b class="fs-5 text-warning">Conception</b>
+                                    <p class="mb-0 opacity-8"> 
+                                        Using the informations you provided in the previous phase,
+                                        our team will work to create a design fo your comments and contributions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex process" id="process-3">
+                                <div class="me-3 fs-5 position-relative">
+                                    <div class="border-left-center"></div>
+                                    <i class="bi bi-code-slash process-icon rounded-circle"></i>
+                                </div>
+
+                                <div class="mb-5 px-3 pb-3 border-radius-md shadow">
+                                    <b class="fs-5 text-warning">Development</b>
+                                    <p class="mb-0 opacity-8"> 
+                                        Once you have approved the design, it's time to
+                                        take action! We will convert the design into a 
+                                        website and share with you a private link 
+                                        to preview and test your new site.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex process" id="process-4">
+                                <div class="me-3 fs-5 position-relative">
+                                    <div class="border-left-center"></div>
+                                    <i class="bi bi-card-text process-icon rounded-circle"></i>
+                                </div>
+
+                                <div class="mb-5 px-3 pb-3 border-radius-md shadow">
+                                    <b class="fs-5 text-warning">Content</b>
+                                    <p class="mb-0 opacity-8"> 
+                                        Customers visit your website for reasons, 
+                                        you need to be sure that all their questions are answered! 
+                                        Content is crucial for a website like the heart is 
+                                        important for the human body. We will page your content
+                                        so that it's beautiful and easy to read.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex process" id="process-5">
+                                <div class="me-3 fs-5 position-relative">
+                                    <div class="border-left-center"></div>
+                                    <i class="bi bi-cloud-arrow-down process-icon rounded-circle"></i>
+                                </div>
+
+                                <div class="mb-5 px-3 pb-3 border-radius-md shadow">
+                                    <b class="fs-5 text-warning">Deployment</b>
+                                    <p class="mb-0 opacity-8"> 
+                                        Excited about bringing your site to the world!
+                                        We will do all the technical work for you.
+                                        Making it available on your server, making it live,
+                                        debugging if necessary.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex process" id="process-6">
+                                <div class="me-3 fs-5 position-relative">
+                                    <i class="bi bi-people process-icon rounded-circle"></i>
+                                </div>
+
+                                <div class="mb-4 px-3 pb-3 border-radius-md shadow">
+                                    <b class="fs-5 text-warning">Training</b>
+                                    <p class="mb-0 opacity-8"> 
+                                        Your website is lauched, this is just 
+                                        the beginning! We will help you with how 
+                                        to manage your site as well as respond to all 
+                                        your queries. Your site will need regular care to thrive.
+                                        We will be available at your side!
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </section>
+
+        <div class="re-C-Intro d-flex justify-content-center align-items-center mt-5 px-2 py-5 text-white ">
+            
+            <div class="">
+                <h2 class="text-center fw-bolder fs-4">Don't take our word for it, see what our customers say</h2>
+                <div class="mt-4 text-center An-5">
+                    <a class="text-decoration-none" href="#reviews">
+                        <i class="bi bi-chevron-double-down fs-5 text-warning "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section id="reviews" class="mt-70px">
+            <div class="container position-relative">
+                <button class="position-absolute border-0 btn-revi-left d-none"  
+                id="review-btn-back">
+                    <i class="bi bi-chevron-double-left btn-control 
+                     bg-warning rounded-circle px-2 py-2"></i>
+                </button>
+
+                <button class="position-absolute bg-transparent border-0 btn-revi-right" 
+                id="review-btn-forward">
+                    <i class="bi bi-chevron-double-right btn-control 
+                     bg-warning rounded-circle px-2 py-2"></i>
+                </button>
+
+                <div class="row flex-nowrap overflow-hidden mb-5" id="review-container">
+
+                    <div class="col-md-4 mb-2">
+                            <div class="bg-white shadow border-radius p-4">
+                                <p class="opacity-8 mb-4">
+                                    I am incredibly impressed with the website services provided by this company. 
+                                    The team was attentive to my needs, and they 
+                                    delivered a sleek, modern website that perfectly represents my business. 
+                                    Kudos to the entire team!
+                                </p>
+
+                                <div class="">
+                                    <span class="bi bi-person-circle fs-4"></span>
+                                    <span class="my-auto ms-2">Alice Johnson</span>
+                                </div>
+                            </div>
+                    </div> 
+
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                Working with this service provider was a game-changer for my online 
+                                presence. They not only crafted a visually stunning website but 
+                                also ensured it's responsive and user-friendly. 
+                                The attention to detail exceeded my expectations. Highly recommend!
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Michael Chen</span>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                As a small business owner, I needed a website that stood out. 
+                                This service provider not only delivered on design but also on 
+                                functionality. The site is easy to navigate, and their ongoing 
+                                support is top-notch. A definite five-star experience!
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">David Thompson</span>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                I couldn't be happier with the website development services 
+                                I received. The team was responsive, professional, 
+                                and turned my vision into reality. My website not only 
+                                looks fantastic but also performs seamlessly. 
+                                Thank you for your exceptional work!responsive and user-friendly. 
+                                The attention to detail exceeded my expectations. Highly recommend!
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Emily Rodriguez</span>
+                            </div>
+                        </div>
+                    </div> 
+
+                    
+
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                I approached this company with a challenging project, 
+                                and they exceeded my expectations. The level of creativity 
+                                and technical expertise displayed during the website development 
+                                was outstanding. I'm thrilled with the final result!
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Sophie Turner</span>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                I'm impressed by the professionalism and efficiency of this 
+                                service provider. They took the time to understand 
+                                my business goals and delivered a website that aligns perfectly. 
+                                The collaborative process made the entire experience enjoyable.
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Alex Mitchell</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                From start to finish, the team demonstrated a 
+                                commitment to excellence. They transformed my
+                                 outdated website into a modern, visually appealing platform. 
+                                 The communication throughout the project was excellent, and I 
+                                 appreciate their dedication.
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Olivia Foster</span>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                I was looking for a reliable partner to revamp my 
+                                e-commerce site, and this service provider delivered 
+                                exceptional results. The website is not only aesthetically 
+                                pleasing but also optimized for a seamless shopping experience. 
+                                Great job!
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Connor Lewis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-2">
+                        <div class="bg-white shadow border-radius p-4">
+                            <p class="opacity-8 mb-4">
+                                I'm beyond satisfied with the website services provided by this team. 
+                                They brought creativity and technical expertise to the table, 
+                                resulting in a website that exceeded my expectations. 
+                                The attention to detail is evident in every aspect. Highly recommend!
+                            </p>
+
+                            <div class="">
+                                <span class="bi bi-person-circle fs-4"></span>
+                                <span class=" my-auto ms-2">Isabella Garcia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="" id="footer">
+            <div class="container d-flex justify-content-center border-top 
+            border-2 border-bottom  py-4 mb-5">
+                <div class="my-auto">
+                    <span>With <i class="bi bi-heart-fill text-danger"></i></span>
+                </div>
+            </div>
+            
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
