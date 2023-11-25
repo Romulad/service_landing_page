@@ -107,9 +107,19 @@ document.getElementById('respo-btn').addEventListener('click', ()=>{
 
 /* contact Us */
 document.querySelectorAll('.head-contact-btn').forEach((btn) =>{
+        let contactForm = document.getElementById('contact-form');
         btn.addEventListener('click', ()=>{
-        let firstInput = document.getElementById('first_name')
-        firstInput.focus();
+        if(!contactForm.classList.contains('d-none')){
+            let firstInput = document.getElementById('first_name');
+            firstInput.focus();
+        }else{
+            document.getElementById('message-form').classList.add('top-70p');
+            document.getElementById('close-message-form').addEventListener("click", 
+            ()=>{
+                document.getElementById('message-form').classList.remove('top-70p')
+            });
+        };
+        
     });
 });
 
@@ -155,7 +165,7 @@ const validForm = () =>{
                     errorConta.classList.remove('d-none');
                 }else{
                     let pEl = document.createElement('p');
-                    pEl.classList.add('text-danger', "mb-0", 'mt-1');
+                    pEl.classList.add('text-danger', "mb-0", 'mt-1', 'fs-14');
                     pEl.textContent = el.name == "email" ? message2 : `${message} ${el.getAttribute('namV')}`;
                     pEl.setAttribute('id', `error-${el.id}`)
                     parentEl.appendChild(pEl);

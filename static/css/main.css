@@ -6,11 +6,12 @@
 }
 
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', Verdana, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
-label{
-    opacity: 0.8;
-}
+
+.shadow {
+    box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.1) !important;
+  }
 
 /* =========================== Animation =========================== */
 @keyframes apperAndDisa {
@@ -122,8 +123,9 @@ nav{
     position: fixed;
     top: 5px;
     left: 2.5%;
-    box-shadow: 0rem 0rem 5rem 0.1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0rem 1rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     width: 95%;
+    background: linear-gradient(to left, #fff 60%, rgb(250, 169, 19));
 }
 
 nav > ul{
@@ -164,6 +166,10 @@ nav > ul{
     width: 100%;
 }
 
+.head-link:active::after{
+    width: 100%;
+}
+
 
 nav > button{
     background-color: transparent;
@@ -200,10 +206,10 @@ nav > ul >  button{
         left: -200%;
         height: 100%;
         overflow: auto;
-        width: 280px;
+        width: 220px;
         background-color: #ffff;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
+        border-top-right-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
         transition-property: left;
         transition-duration: 0.3s;
         transition-timing-function:ease-in-out;
@@ -267,8 +273,45 @@ nav > ul >  button{
 .head-form{
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 60%;
     transform: translateX(-50%);
+    box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.message{
+    z-index: 100;
+    position: fixed;
+    top: -100%;
+    left:  50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    padding: 12px 10px;
+    width: 500px;
+    color: #fff;
+    text-align: center;
+    transition-property: top;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-out;
+    box-shadow: 0rem 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.top-70p{
+    top: 70px;
+}
+@media screen and (max-width:510px) {
+    .message{
+        width: 400px;
+    }
+}
+@media screen and (max-width:450px) {
+    .message{
+        width: 300px;
+    }
+}
+@media screen and (max-width:300px) {
+    .message{
+        width: 95%;
+    }
 }
 
 .pos-width{
@@ -293,7 +336,8 @@ nav > ul >  button{
 .form-control:focus{
     outline: 0;
     border: 0px;
-    box-shadow: 0rem 0rem 0.5rem 0.1rem rgb(235, 238, 241);    
+    box-shadow: 0rem 0rem 0.5rem 0.1rem rgb(235, 238, 241); 
+  
 }
 .form-control::placeholder{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -303,6 +347,7 @@ nav > ul >  button{
     box-shadow: 0rem 0rem 0.5rem 0.1rem rgb(235, 238, 241); 
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #ffff;
+   
 }
 
 
@@ -337,12 +382,12 @@ nav > ul >  button{
 
 
 .service-pre{
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0rem 0rem 1rem 0.3rem rgba(0, 0, 0, 0.15);
     background-color: #ffff;
 }
 .service-pre:hover{
     cursor: auto;
-    filter: drop-shadow(1rem -1rem rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0.5rem -0.5rem rgba(0, 0, 0, 0.2));
 }
 
 
@@ -419,6 +464,13 @@ nav > ul >  button{
     left: 0%; 
 }
 
+.review-container > .col-md-4{
+    margin: 10px 0px;
+}
+
+.fs-14{
+    font-size: 14px;
+}
 
 .fs-17{
     font-size: 17px;
@@ -465,7 +517,7 @@ nav > ul >  button{
     opacity: 1;
 }
 .opacity-8{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .border-radius{
